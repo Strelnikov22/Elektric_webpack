@@ -2,7 +2,7 @@
 
 class ModalWindow {
    constructor({
-       overlay,
+       overlay, 
        modal,
        closeBtn,
        openBtn,
@@ -85,7 +85,6 @@ class ModalWindow {
    init(){
        this.linkedAnimate();
        this.modalEvent();
-       console.log(this)
    };
 } 
 

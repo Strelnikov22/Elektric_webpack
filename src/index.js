@@ -18,5 +18,16 @@ const modalWin = new ModalWindow(modal);
 
 modalWin.init();
 
+const sliderTop = {
+    itemContainer: '.top-slider',
+    item: '.item',
+    animation:{
+        typeOpen:'animate__fadeIn',
+        typeClose:'animate__fadeOut',
+    }
+};
 
+const sliderAutoTop = new Slider(sliderTop);
+
+sliderAutoTop.init();
 

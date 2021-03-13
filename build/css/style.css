@@ -10,6 +10,16 @@ body {
 	overflow-x: hidden;
 	font-family: "Open Sans", sans-serif;
 }
+.item{
+	display: none;
+}
+.active{
+	display: block!important;
+}
+.active .table{
+	opacity: 1!important;
+	visibility: visible!important;
+}
 .main-wrapper {
 	min-height: 100%;
 	height: auto !important;
