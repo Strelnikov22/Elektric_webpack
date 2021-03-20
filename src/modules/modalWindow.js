@@ -15,11 +15,23 @@ class ModalWindow {
    }){
     this.overlay = document.querySelector(overlay),
     this.modal = document.querySelector(modal),
-    this.closeBtn = document.querySelector(closeBtn),
-    this.openBtn = document.querySelector(openBtn),
+    this.closeBtn = document.querySelectorAll(closeBtn),
+    this.openBtn = document.querySelectorAll(openBtn),
     this.animation = animation;
    };
-
+   
+   //-----Проверка на подключение анимации-----
+   verificationAnimate(){
+     const linkSearch = document.querySelector('[href*="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"]');
+     
+     
+    if(linkSearch){
+        return;
+    }else{
+         this.linkedAnimate();
+    }
+    
+}
    //----Подключаем анимацию-----
    linkedAnimate(){
        const link = document.createElement('link');
@@ -29,9 +41,20 @@ class ModalWindow {
    };
 
    modalEvent(){
-       this.openBtn.addEventListener('click', this.openModal.bind(this));
-       this.closeBtn.addEventListener('click', this.closeModal.bind(this));
+       this.openBtn.forEach((elem)=>{
+            this.eventOpenForEach(elem);
+       });
+       this.closeBtn.forEach((elem)=>{
+            this.eventCloseForEach(elem);
+       });
        this.overlay.addEventListener('click', this.closeModal.bind(this));
+   };
+
+   eventOpenForEach(elem){
+        elem.addEventListener('click', this.openModal.bind(this));
+   };
+   eventCloseForEach(elem){
+        elem.addEventListener('click', this.closeModal.bind(this));
    };
 
    //--------Открытие модального окна--------
@@ -83,7 +106,8 @@ class ModalWindow {
    }
 
    init(){
-       this.linkedAnimate();
+        this.verificationAnimate();
+     //   this.linkedAnimate();
        this.modalEvent();
    };
 } 

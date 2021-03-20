@@ -16,6 +16,17 @@ class Slider {
         this.animation = animation;
     };
 
+    verificationAnimate(){
+        const linkSearch = document.querySelector('[href*="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"]');
+        
+        
+       if(linkSearch){
+           return;
+       }else{
+            this.linkedAnimate();
+       }
+       
+   }
     //----Подключаем анимацию-----
     linkedAnimate(){
         const link = document.createElement('link');
@@ -53,26 +64,10 @@ class Slider {
         }, 500);
     };
 
-    // style(){
-    //     const createStyle = document.createElement('style');
-    //     createStyle.textContent = `
-    //         .item{
-    //             display:none;
-    //         };
-    //         .active{
-    //             display:block!important;
-    //         };
-    //         .active .table{
-    //             opacity: 1!important;
-    //             visibility: visible!important;
-    //         }
-    //     `
-    //     document.head.append(createStyle);
-    // }
 
     init(){
+        this.verificationAnimate();
         this.startSlide(3500);
-        // this.style();
     };
 }
 

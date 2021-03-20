@@ -45,7 +45,7 @@
 
 	<div class="main-wrapper">
 		<!-- * * * * * * Header * * * * * * -->
-		<div class="header-wrapper">
+		<div class="header-wrapper" >
 			<div class="header-panel">
 				<div class="container">
 					<div class="shedule left hidden-xs">
@@ -94,7 +94,7 @@
 
 
 		<!-- * * * * * * Top slider * * * * * * -->
-		<div class="top-slider white text-center relative">
+		<div class="top-slider white text-center relative" id="top">
 			<div class="item active relative"
 				style="background: url(images/slide1.jpg) 50% 50% no-repeat; background-size: cover;">
 				<div class="table">
@@ -266,10 +266,10 @@
 					</div>
 				</div>
 
-				<div class="services-arrow">
+				<!-- <div class="services-arrow">
 					<img class="arrow-left" src="images/right-arrow_1.svg" alt="arrow-left">
 					<img class="arrow-right" src="images/right-arrow_1.svg" alt="arrow-right">
-				</div>
+				</div> -->
 
 			</div>
 			<div class="push70"></div>
@@ -479,7 +479,7 @@
 								<div class="title">
 									Как построена ваша работа?
 								</div>
-								<div class="element-content">
+								<div class="element-content activeContent">
 									С другой стороны дальнейшее развитие различных форм деятельности обеспечивает
 									широкому кругу (специалистов) участие
 									в формировании систем массового участия. Значимость этих проблем настолько очевидна,
@@ -628,17 +628,17 @@
 		<div class="title-h2">Мы перезвоним через 5 минут!</div>
 		<br />
 		<div class="rf">
-			<form action="" name="form-callback">
+			<form action="" name="form-callback" class="form-modal">
 				<div class="form-group">
-					<input type="text" name="fio" class="form-control" placeholder="Ваше имя" />
+					<input type="name" name="fio" class="form-control form-name" placeholder="Ваше имя" />
 				</div>
 
 				<div class="form-group">
-					<input type="text" name="tel" class="form-control tel required" placeholder="Телефон*" />
+					<input type="tel" name="tel" class="form-control form-tel tel required" placeholder="Телефон*" />
 				</div>
 				<p><span class="red">*</span> <span class="f12">- поля, обязательные для заполнения</span></p>
 				<div>
-					<input type="submit" class="button btn feedback" value="Отправить" />
+					<input type="submit" class="button form-btn btn feedback" value="Отправить" />
 				</div>
 			</form>
 		</div>

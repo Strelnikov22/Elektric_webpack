@@ -28,6 +28,7 @@ module.exports = {
         { from: "./css", to: "../build/css" },
         { from: "./fonts", to: "../build/fonts" },
         { from: "./images", to: "../build/images" },
+        { from: "server.php", to: "../build" },
       ],
     }),
   ],

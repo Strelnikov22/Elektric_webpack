@@ -10,11 +10,23 @@ body {
 	overflow-x: hidden;
 	font-family: "Open Sans", sans-serif;
 }
+.accordeon .element{
+	z-index: 100;
+	display: block;
+	width: 100%;
+	height: auto;
+
+}
 .item{
 	display: none;
 }
 .active{
 	display: block!important;
+}
+.activeContent{
+	height: auto!important;
+	padding: 20px;
+	transition: height 300ms linear;
 }
 .active .table{
 	opacity: 1!important;
@@ -418,7 +430,7 @@ a.absolute {
 .mobile-menu {
 	position: fixed;
 	top: 0;
-	right: -400px;
+	display: none;
 	background: #21282e;
 	height: 100%;
 	width: 370px;
@@ -981,8 +993,8 @@ video#video_background {
 
 /************************* accordeon **************************/
 .accordeon .element-content {
-	display: none;
-	padding: 20px;
+	height: 0px;
+	overflow: hidden;
 	font-size: 13px;
 	color: #888885;
 }
@@ -1031,9 +1043,9 @@ video#video_background {
 .accordeon .element.active .title:before {
 	background: url(../images/minus.png) 50% 50% no-repeat #333;
 }
-.accordeon > div:first-of-type .element-content {
+/* .accordeon > div:first-of-type .element-content {
 	display: block;
-}
+} */
 .accordeon .element .title:hover:before {
 	background-color: #333;
 }
